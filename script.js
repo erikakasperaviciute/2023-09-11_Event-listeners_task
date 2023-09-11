@@ -173,6 +173,26 @@ minus2Btn.addEventListener("click", function () {
 function updateValue(e) {
   h3.textContent = e.target.value;
   colorChange();
+  if (h3.textContent < 3) {
+    minus2Btn.setAttribute("disabled", true);
+  } else {
+    minus2Btn.removeAttribute("disabled");
+  }
+  if (h3.textContent < 2) {
+    minusBtn.setAttribute("disabled", true);
+  } else {
+    minusBtn.removeAttribute("disabled");
+  }
+  if (h3.textContent >= 9) {
+    plus2Btn.setAttribute("disabled", true);
+  } else {
+    plus2Btn.removeAttribute("disabled");
+  }
+  if (h3.textContent >= 10) {
+    plusBtn.setAttribute("disabled", true);
+  } else {
+    plusBtn.removeAttribute("disabled");
+  }
 }
 
 inputElement.addEventListener("input", updateValue);
