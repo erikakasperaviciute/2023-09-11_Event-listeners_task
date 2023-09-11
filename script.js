@@ -31,20 +31,24 @@ div.append(h3, plusBtn, minusBtn);
 
 plusBtn.addEventListener("click", function () {
   h3.textContent++;
-  if (h3.textContent >= 10) {
-    plusBtn.setAttribute("disabled", true);
-  }
-  if (h3.textContent >= 2) {
-    minusBtn.removeAttribute("disabled");
-  }
+  btnAttribute();
 });
 
 minusBtn.addEventListener("click", function () {
   h3.textContent--;
+  btnAttribute();
+});
+
+function btnAttribute() {
   if (h3.textContent < 2) {
     minusBtn.setAttribute("disabled", true);
+  } else {
+    minusBtn.removeAttribute("disabled");
   }
-  if (h3.textContent <= 9) {
+
+  if (h3.textContent >= 10) {
+    plusBtn.setAttribute("disabled", true);
+  } else {
     plusBtn.removeAttribute("disabled");
   }
-});
+}
