@@ -32,11 +32,9 @@ div.append(h3, plusBtn, minusBtn);
 plusBtn.addEventListener("click", function () {
   h3.textContent++;
   if (h3.textContent >= 10) {
-    console.log(h3.textContent);
     plusBtn.setAttribute("disabled", true);
   }
   if (h3.textContent >= 2) {
-    console.log(h3.textContent);
     minusBtn.removeAttribute("disabled");
   }
 });
@@ -44,11 +42,9 @@ plusBtn.addEventListener("click", function () {
 minusBtn.addEventListener("click", function () {
   h3.textContent--;
   if (h3.textContent < 2) {
-    console.log(h3.textContent);
     minusBtn.setAttribute("disabled", true);
   }
   if (h3.textContent <= 9) {
-    console.log(h3.textContent);
     plusBtn.removeAttribute("disabled");
   }
 });
